@@ -15,6 +15,7 @@
 		03169936261698E1009255E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03169934261698E1009255E1 /* LaunchScreen.storyboard */; };
 		03169941261698E2009255E1 /* DogBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03169940261698E2009255E1 /* DogBookTests.swift */; };
 		0316994C261698E2009255E1 /* DogBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0316994B261698E2009255E1 /* DogBookUITests.swift */; };
+		9EEA7787720247BA5E1452B3 /* Pods_DogBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66387F03112FB15B0315A574 /* Pods_DogBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		03169947261698E2009255E1 /* DogBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0316994B261698E2009255E1 /* DogBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBookUITests.swift; sourceTree = "<group>"; };
 		0316994D261698E2009255E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66387F03112FB15B0315A574 /* Pods_DogBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DogBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABA04C269E896BC8A9BB9224 /* Pods-DogBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogBook.release.xcconfig"; path = "Target Support Files/Pods-DogBook/Pods-DogBook.release.xcconfig"; sourceTree = "<group>"; };
+		BC37051BD50F124EA3C803B1 /* Pods-DogBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DogBook.debug.xcconfig"; path = "Target Support Files/Pods-DogBook/Pods-DogBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EEA7787720247BA5E1452B3 /* Pods_DogBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,8 @@
 				0316993F261698E2009255E1 /* DogBookTests */,
 				0316994A261698E2009255E1 /* DogBookUITests */,
 				03169927261698DE009255E1 /* Products */,
+				D80B7C0E6B23D2E66E214427 /* Pods */,
+				2D0806C4191F569EC498324F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +135,24 @@
 			path = DogBookUITests;
 			sourceTree = "<group>";
 		};
+		2D0806C4191F569EC498324F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66387F03112FB15B0315A574 /* Pods_DogBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D80B7C0E6B23D2E66E214427 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC37051BD50F124EA3C803B1 /* Pods-DogBook.debug.xcconfig */,
+				ABA04C269E896BC8A9BB9224 /* Pods-DogBook.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03169950261698E2009255E1 /* Build configuration list for PBXNativeTarget "DogBook" */;
 			buildPhases = (
+				116E808C4D7E98C07C9B36B8 /* [CP] Check Pods Manifest.lock */,
 				03169922261698DE009255E1 /* Sources */,
 				03169923261698DE009255E1 /* Frameworks */,
 				03169924261698DE009255E1 /* Resources */,
+				AC5A14A577ADF4CA1EA8FFF0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +279,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		116E808C4D7E98C07C9B36B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DogBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC5A14A577ADF4CA1EA8FFF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DogBook/Pods-DogBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DogBook/Pods-DogBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DogBook/Pods-DogBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03169922261698DE009255E1 /* Sources */ = {
@@ -433,6 +502,7 @@
 		};
 		03169951261698E2009255E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC37051BD50F124EA3C803B1 /* Pods-DogBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +522,7 @@
 		};
 		03169952261698E2009255E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABA04C269E896BC8A9BB9224 /* Pods-DogBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
