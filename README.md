@@ -78,4 +78,3 @@ In general this app is a simple concept that can have many different small imple
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
