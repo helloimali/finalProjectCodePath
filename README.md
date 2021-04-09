@@ -72,7 +72,9 @@ In general this app is a simple concept that can have many different small imple
 
 
 ## Schema 
-[This section will be completed in Unit 9]
+*Back end will be in a database that holds the posts (along with comments)
+
+
 ### Models
 [Add table of models]
 ### Networking
