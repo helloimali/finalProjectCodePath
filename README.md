@@ -68,7 +68,7 @@ In general this app is a simple concept that can have many different small imple
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="Wireframe.pdf" width=600>
+<img src="Wireframe.png" width=600>
 
 
 ## Schema 
