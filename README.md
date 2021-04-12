@@ -67,7 +67,6 @@ In general this app is a simple concept that can have many different small imple
    * Profile button
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
 <img src="Wireframe.png" width=600>
 
 
