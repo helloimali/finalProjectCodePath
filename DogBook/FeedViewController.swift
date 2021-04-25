@@ -15,7 +15,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell") as! FeedCell
-        cell.statusLbl.text = "Ali Malik"
+        cell.nameLbl.text = " Ali Malik"
+        cell.statusLbl.text = "Currently at demo day!"
         
         return cell
     }

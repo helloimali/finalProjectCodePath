@@ -308,19 +308,31 @@ to do:</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyD-SI-tro">
-                                                    <rect key="frame" x="39" y="41" width="42" height="21"/>
+                                                    <rect key="frame" x="39" y="50" width="304" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RF6-GB-d8A">
+                                                    <rect key="frame" x="39" y="21" width="304" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="gyD-SI-tro" secondAttribute="bottom" constant="29" id="B9u-xr-BrO"/>
-                                                <constraint firstItem="gyD-SI-tro" firstAttribute="leading" secondItem="DVj-2r-XM3" secondAttribute="leadingMargin" constant="19" id="aTx-1g-BrK"/>
-                                                <constraint firstItem="gyD-SI-tro" firstAttribute="top" secondItem="DVj-2r-XM3" secondAttribute="topMargin" constant="30" id="ifx-bL-2lm"/>
+                                                <constraint firstAttribute="bottom" secondItem="gyD-SI-tro" secondAttribute="bottom" constant="31" id="AGl-De-8Iy"/>
+                                                <constraint firstAttribute="trailing" secondItem="gyD-SI-tro" secondAttribute="trailing" constant="71" id="C3E-HX-3my"/>
+                                                <constraint firstItem="gyD-SI-tro" firstAttribute="top" secondItem="DVj-2r-XM3" secondAttribute="top" constant="50" id="ChP-TK-Ini"/>
+                                                <constraint firstItem="gyD-SI-tro" firstAttribute="leading" secondItem="DVj-2r-XM3" secondAttribute="leading" constant="39" id="Nr2-tU-qFP"/>
+                                                <constraint firstItem="RF6-GB-d8A" firstAttribute="top" secondItem="DVj-2r-XM3" secondAttribute="top" constant="21" id="RSC-1m-98T"/>
+                                                <constraint firstAttribute="bottom" secondItem="RF6-GB-d8A" secondAttribute="bottom" constant="60" id="UUR-tB-PO1"/>
+                                                <constraint firstAttribute="trailing" secondItem="RF6-GB-d8A" secondAttribute="trailing" constant="71" id="iYv-5G-J8d"/>
+                                                <constraint firstItem="RF6-GB-d8A" firstAttribute="leading" secondItem="DVj-2r-XM3" secondAttribute="leading" constant="39" id="vsp-Hh-2VL"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="nameLbl" destination="RF6-GB-d8A" id="Gln-kP-Vfv"/>
                                             <outlet property="statusLbl" destination="gyD-SI-tro" id="eCh-N5-XSP"/>
                                         </connections>
                                     </tableViewCell>

@@ -9,6 +9,7 @@ import UIKit
 
 class FeedCell: UITableViewCell {
 
+    @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var statusLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
