@@ -1,24 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DogBook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmojiLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dcL-4X-Gfu">
+                                <rect key="frame" x="127" y="368" width="160" height="160"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Welcome to DogBook" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Wx5-ys-RNl">
+                                <rect key="frame" x="0.0" y="171" width="414" height="128"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xa8-9y-CYr">
+                                <rect key="frame" x="0.0" y="671" width="414" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                                <state key="normal" title="Click here to Begin">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="G8T-cZ-qMq" kind="presentation" id="eat-dT-Eme"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.48020892927483488" green="0.8201106932030624" blue="0.93478349347551526" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xa8-9y-CYr" secondAttribute="bottom" constant="161" id="1Je-EX-b3y"/>
+                            <constraint firstItem="Xa8-9y-CYr" firstAttribute="top" secondItem="dcL-4X-Gfu" secondAttribute="bottom" constant="143" id="5td-zf-KNc"/>
+                            <constraint firstItem="dcL-4X-Gfu" firstAttribute="top" secondItem="Wx5-ys-RNl" secondAttribute="bottom" constant="69" id="JnM-O0-OhI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wx5-ys-RNl" secondAttribute="trailing" id="KO6-2y-H20"/>
+                            <constraint firstItem="dcL-4X-Gfu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KPB-Es-chd"/>
+                            <constraint firstItem="Wx5-ys-RNl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LoZ-41-alM"/>
+                            <constraint firstItem="Xa8-9y-CYr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NUc-uB-g0Q"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xa8-9y-CYr" secondAttribute="trailing" id="OeU-Ek-f2C"/>
+                            <constraint firstItem="Wx5-ys-RNl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="127" id="TAc-qm-hJ8"/>
+                            <constraint firstItem="dcL-4X-Gfu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dMk-lb-Gu9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="88.392857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VaF-lH-Mpc">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="G8T-cZ-qMq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rI2-Nd-hfn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o87-H1-VxZ">
+                                <rect key="frame" x="20" y="128" width="280" height="177"/>
+                                <string key="text">Things
+to do:</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="74"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="chatEmoji" translatesAutoresizingMaskIntoConstraints="NO" id="48l-3A-c7m">
+                                <rect key="frame" x="20" y="372.5" width="53" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="bMD-i4-M3x"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="envEmoji" translatesAutoresizingMaskIntoConstraints="NO" id="OIR-1L-bms">
+                                <rect key="frame" x="20" y="497" width="53" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="40h-Kq-KRQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post status updates about your life!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31A-el-7cG">
+                                <rect key="frame" x="93" y="362" width="301" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="301" id="Bel-8K-XWh"/>
+                                    <constraint firstAttribute="height" constant="67" id="Wex-sG-vjz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send messages to your friends! Bark your Bark!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4V-AG-erF">
+                                <rect key="frame" x="93" y="499" width="301" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11x-4b-czz">
+                                <rect key="frame" x="0.0" y="642" width="414" height="47"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="pqE-1U-gmC" kind="presentation" id="KNp-bt-0lH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Gy9-bA-Zo0"/>
+                        <color key="backgroundColor" red="0.48020892929999998" green="0.82011069319999996" blue="0.93478349350000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OIR-1L-bms" firstAttribute="leading" secondItem="48l-3A-c7m" secondAttribute="leading" id="0vw-iX-Afm"/>
+                            <constraint firstItem="Gy9-bA-Zo0" firstAttribute="trailing" secondItem="M4V-AG-erF" secondAttribute="trailing" constant="20" id="7Wa-fW-OuV"/>
+                            <constraint firstItem="o87-H1-VxZ" firstAttribute="leading" secondItem="Gy9-bA-Zo0" secondAttribute="leading" constant="20" id="Bhg-mh-lGA"/>
+                            <constraint firstItem="31A-el-7cG" firstAttribute="leading" secondItem="48l-3A-c7m" secondAttribute="trailing" constant="20" id="DfC-8B-z7f"/>
+                            <constraint firstItem="M4V-AG-erF" firstAttribute="top" secondItem="31A-el-7cG" secondAttribute="bottom" constant="70" id="H8i-Ne-EOD"/>
+                            <constraint firstItem="31A-el-7cG" firstAttribute="leading" secondItem="M4V-AG-erF" secondAttribute="leading" id="OaG-yK-Pc9"/>
+                            <constraint firstItem="31A-el-7cG" firstAttribute="top" secondItem="o87-H1-VxZ" secondAttribute="bottom" constant="57" id="R26-CX-KsR"/>
+                            <constraint firstItem="11x-4b-czz" firstAttribute="leading" secondItem="Gy9-bA-Zo0" secondAttribute="leading" id="ToK-9T-eUW"/>
+                            <constraint firstItem="o87-H1-VxZ" firstAttribute="top" secondItem="Gy9-bA-Zo0" secondAttribute="top" constant="84" id="aL7-av-cYH"/>
+                            <constraint firstItem="31A-el-7cG" firstAttribute="trailing" secondItem="M4V-AG-erF" secondAttribute="trailing" id="agm-u8-mt4"/>
+                            <constraint firstItem="11x-4b-czz" firstAttribute="top" secondItem="M4V-AG-erF" secondAttribute="bottom" constant="83" id="dUh-B8-jzG"/>
+                            <constraint firstItem="OIR-1L-bms" firstAttribute="top" secondItem="48l-3A-c7m" secondAttribute="bottom" constant="78.5" id="htU-kK-fIy"/>
+                            <constraint firstItem="OIR-1L-bms" firstAttribute="trailing" secondItem="48l-3A-c7m" secondAttribute="trailing" id="lWh-bB-4Fa"/>
+                            <constraint firstItem="Gy9-bA-Zo0" firstAttribute="trailing" secondItem="o87-H1-VxZ" secondAttribute="trailing" constant="114" id="q4O-e3-BhM"/>
+                            <constraint firstItem="OIR-1L-bms" firstAttribute="leading" secondItem="o87-H1-VxZ" secondAttribute="leading" id="tED-8k-ecf"/>
+                            <constraint firstItem="48l-3A-c7m" firstAttribute="centerY" secondItem="31A-el-7cG" secondAttribute="centerY" id="uKC-5G-OpB"/>
+                            <constraint firstItem="Gy9-bA-Zo0" firstAttribute="trailing" secondItem="11x-4b-czz" secondAttribute="trailing" id="v1e-br-my1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q07-XN-7v6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128.985507246377" y="87.723214285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oqg-KG-dT3">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="pqE-1U-gmC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eEY-hT-Eo5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fG1-in-uc4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vxR-KE-H0I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101" y="88"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="EmojiLogo" width="160" height="160"/>
+        <image name="chatEmoji" width="120" height="120"/>
+        <image name="envEmoji" width="120" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
