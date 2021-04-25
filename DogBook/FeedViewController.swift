@@ -1,5 +1,5 @@
 //
-//  MessagesViewController.swift
+//  FeedViewController.swift
 //  DogBook
 //
 //  Created by Ali Malik on 4/25/21.
@@ -7,30 +7,25 @@
 
 import UIKit
 
-class MessagesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MsgCell") as! MessagesCell
-        cell.nameLbl.text = "Ali Malik"
-        cell.textMsg.text = "Hey, do you want to get lunch?"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell") as! FeedCell
+        cell.statusLbl.text = "Ali Malik"
         
         return cell
-
     }
     
 
-    @IBOutlet weak var tblView: UITableView!
-    
+    @IBOutlet weak var FeedtblView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        tblView.delegate = self
-        tblView.dataSource = self
+        FeedtblView.delegate = self
+        FeedtblView.dataSource = self
         // Do any additional setup after loading the view.
     }
     
