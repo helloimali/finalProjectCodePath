@@ -71,9 +71,18 @@ In general this app is a simple concept that can have many different small imple
 
 
 ## Schema 
-*Back end will be in a database that holds the posts (along with comments)
 
-
+Feed Cell.swift: 
+    nameLbl - Stores a name per cell
+    statusLbl - Stores a status per cell
+FeedViewController.swift:
+    FeedtblView - handles the Feed table view
+MessagesCell.swift:
+    profilePictureImg - Stores image url 
+    nameLbl - Holds name 
+MessagesViewController.swift:
+    tblView - handles the message table view 
+    
 ### Models
 [Add table of models]
 ### Networking
